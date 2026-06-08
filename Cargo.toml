@@ -1,0 +1,9 @@
+[package]
+name = "software_rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+csv = "1.4.0"
+
+cursive = { version = "0.21.1", default-features = false, features = ["crossterm-backend"] }
