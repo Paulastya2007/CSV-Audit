@@ -155,17 +155,17 @@ fn find_session_files(root: &std::path::Path) -> Vec<Session> {
 
     for entry in entries.flatten() {
         let path = entry.path();
-        if path.is_file() {
-            if let Some(name) = path.file_name() {
-                let name_str = name.to_string_lossy();
-                if name_str.ends_with(".session.json") {
-                    /* Derive original CSV path from session filename */
-                    let original = name_str.trim_end_matches(".session.json");
-                    let original_path = root.join(original);
+        if path.is_file()
+            && let Some(name) = path.file_name()
+        {
+            let name_str = name.to_string_lossy();
 
-                    if let Ok(Some(session)) = Session::load(&original_path) {
-                        sessions.push(session);
-                    }
+            if name_str.ends_with(".session.json") {
+                let original = name_str.trim_end_matches(".session.json");
+                let original_path = root.join(original);
+
+                if let Ok(Some(session)) = Session::load(&original_path) {
+                    sessions.push(session);
                 }
             }
         }
