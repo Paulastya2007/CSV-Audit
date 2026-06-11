@@ -118,6 +118,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "csv_audit_tool"
+version = "0.1.1"
+dependencies = [
+ "csv",
+ "cursive",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "cursive"
 version = "0.21.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -597,16 +607,6 @@ name = "smallvec"
 version = "1.15.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03"
-
-[[package]]
-name = "software_rust"
-version = "0.1.0"
-dependencies = [
- "csv",
- "cursive",
- "serde",
- "serde_json",
-]
 
 [[package]]
 name = "static_assertions"

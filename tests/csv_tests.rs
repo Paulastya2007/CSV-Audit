@@ -1,6 +1,6 @@
+use csv_audit_tool::csv::backend::inspect_csv;
+use csv_audit_tool::csv::helpdir::find_csv_files;
 use std::fs::{self, File};
-use software_rust::csv::helpdir::find_csv_files;
-use software_rust::csv::backend::inspect_csv;
 
 #[test]
 fn test_find_csv_files_integration() {

@@ -1,4 +1,4 @@
-use software_rust::ui;
+use csv_audit_tool::ui;
 
 fn main() {
     let mut siv = cursive::default();

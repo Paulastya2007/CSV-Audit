@@ -29,7 +29,7 @@ pub fn show_main_menu(siv: &mut Cursive) {
     });
 
     let layout = LinearLayout::vertical()
-        .child(TextView::new("🔒 PASSWORD SANITIZATION TOOL 🔒").h_align(HAlign::Center))
+        .child(TextView::new("🔒 CSV Audit Tool 🔒").h_align(HAlign::Center))
         .child(DummyView)
         .child(TextView::new("Please choose an operation:").h_align(HAlign::Center))
         .child(DummyView)
